@@ -1,0 +1,28 @@
+[
+  {
+    "id": 1,
+    "full_name": "Naveed Fida",
+    "email": "nf@example.com",
+    "phone_number": "234-567-8901",
+    "tags": [
+      "sales"
+    ]
+  },
+  {
+    "id": 2,
+    "full_name": "Victor Reyes",
+    "email": "vpr@example.com",
+    "phone_number": "987-654-3210",
+    "tags": [
+      "finance",
+      "marketing"
+    ]
+  },
+  {
+    "id": 3,
+    "full_name": "Pete Hanson",
+    "email": "ph@example.com",
+    "phone_number": "432-109-8761",
+    "tags": []
+  }
+]

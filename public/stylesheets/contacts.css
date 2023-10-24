@@ -1,0 +1,51 @@
+.contact {
+  text-align: center;
+  margin: 10px;
+}
+
+
+#add-contact-button {
+  margin-right: 10;
+}
+
+main {
+  display: grid; 
+  grid-template-columns: 1fr 1fr 1fr 1fr; 
+  grid-gap: 10px; 
+  width: 100%; 
+}
+
+.modify-banner {
+  text-align: center;
+}
+
+header {
+  text-align: center;
+  margin: auto;
+  width: 100%
+}
+
+#add-contact-div {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: none;
+  position: relative;
+}
+
+p#hidden-id {
+  display: none;
+}
+
+footer {
+  text-align: center; 
+  position: relative;
+  z-index: 2;
+}
+
+#submit-button {
+  display: flex;
+}
+
+.buttons {
+  display: inline;
+}

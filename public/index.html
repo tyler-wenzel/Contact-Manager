@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Contact Manager</title>
+  <script src="/javascripts/jquery.js"></script>
+  <script src="/javascripts/handlebars.js"></script>
+  <script type='module' src='/javascripts/manager.js'></script>
+  <link rel="stylesheet" href="/stylesheets/contacts.css">
+</head>
+
+<body>
+  <header>
+    <h1>
+      Contact Manager
+    </h1>
+  </header>
+  <div class='modify-banner'>
+    <button id='add-contact-button'>Add Contact</button>
+    <label for="search">Search Contacts:</label>
+    <input type="text" id='search-bar'>
+    <label for="search-tags" id='tag-search'>Search tags:
+      <input type="checkbox" id='marketing-search' name='marketing'>marketing
+      <input type="checkbox" id='sales-search' name='sales'>sales
+      <input type="checkbox" id='accounting-search' name='accounting'>accounting
+      <input type="checkbox" id='finance-search' name='finance'>finance
+    </label>
+  </div>
+      <main style='display:grid'>
+
+      </main>
+  <div id="add-contact-div" style='display:none'>
+    <h3>Contact Form</h3>
+    <form action="" id='add-contact-form'>
+      <label for="full_name">Name:</label>
+      <input type="text" name='full_name' id='full_name' required><br>
+      <label for="email">Email:</label>
+      <input type="text" name='email' id='email' required pattern='.+@.+'><br>
+      <label for="phone_number">Phone Number(XXX-XXX-XXXX):</label>
+      <input type="text" name='phone_number' id='phone_number' required pattern='\d\d\d-\d\d\d-\d\d\d\d'><br>
+      <label for="tags">Tags:</label>
+        <input type="checkbox" id='marketing' name='marketing'>marketing
+        <input type="checkbox" id='sales' name='sales'>sales
+        <input type="checkbox" id='accounting' name='accounting'>accounting
+        <input type="checkbox" id='finance' name='finance'>finance<br>
+      <button id='submit-button' class='buttons'>Submit</button>
+    </form>
+    <button id='cancel-button' class='buttons'>Cancel</button>
+</div>
+  <script id="contact" type="text/x-handlebars">
+    <div class='contact'>
+      <h3 class='full_name'>{{full_name}}</h3>
+      <p class='phone_number_label'>Phone Number:<p>
+      <p class='phone_number_value'>{{phone_number}}</p>
+      <p class='email_label'>Email</p>
+      <p class='email_value'> {{email}}</p>
+      <p id='hidden-id'>{{id}}</p>
+      <button class='edit-button'>Edit</button>
+      <button class='delete-button'>Delete</button>
+    </div>
+  </script>
+  <script id="contacts" type="text/x-handlebars">
+    {{#each users}}
+      {{> contactPartial}}
+    {{/each}}
+  </script>
+</body>
+<footer>
+  Created By Tyler Wenzel
+</footer>
+</html>
